@@ -31,3 +31,15 @@ if (menuToggle && mainNav) {
 
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
+
+const visitingCardDialog = document.querySelector('#visiting-card-dialog');
+const showCardButton = document.querySelector('.card-show-trigger');
+const closeCardButton = document.querySelector('.visiting-card-close');
+
+if (visitingCardDialog && showCardButton && closeCardButton) {
+  showCardButton.addEventListener('click', () => visitingCardDialog.showModal());
+  closeCardButton.addEventListener('click', () => visitingCardDialog.close());
+  visitingCardDialog.addEventListener('click', (event) => {
+    if (event.target === visitingCardDialog) visitingCardDialog.close();
+  });
+}
