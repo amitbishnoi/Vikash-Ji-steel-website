@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#121417" />
+  <title>Shree Krishna Steel Railing & Glass Railing Works | Vijayawada</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons & Font Awesome 6 via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts: Inter, Playfair Display & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            oswald: ['Oswald', 'sans-serif'],
+          },
+          colors: {
+            crimson: {
+              500: '#ef4444',
+              600: '#d91c24',
+              700: '#b91c1c',
+              800: '#991b1b',
+            },
+            charcoal: '#121417'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ==========================================
+       MOBILE-FIRST APP UI & ANIMATIONS
+       ========================================== */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes pulseRing {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 28, 36, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(217, 28, 36, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 28, 36, 0); }
+    }
+    @keyframes pulseGreen {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.75); }
+      70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(22, 163, 74, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+    }
+    @keyframes shimmerText {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .animate-float {
+      animation: floatSlow 4.5s ease-in-out infinite;
+    }
+    .pulse-red {
+      animation: pulseRing 2s infinite;
+    }
+    .pulse-whatsapp {
+      animation: pulseGreen 2s infinite;
+    }
+    .metallic-shimmer-text {
+      background: linear-gradient(90deg, #ffffff 0%, #f87171 25%, #fde047 50%, #f87171 75%, #ffffff 100%);
+      background-size: 200% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmerText 5s linear infinite;
+    }
+
+    /* Hide Scrollbars for Native Touch Carousels */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Native Horizontal Swipe Snap Carousel */
+    .snap-carousel {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .snap-item {
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+
+    /* Brushed Stainless Steel Texture */
+    .brushed-metal {
+      background-color: #eef0f4;
+      background-image: 
+        repeating-linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.55) 0px,
+          rgba(255, 255, 255, 0.55) 2px,
+          transparent 2px,
+          transparent 6px
+        ),
+        linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 50%, #d1d5db 100%);
+    }
+
+    /* Geometric Shapes Matching Sample Website */
+    .clip-top-bar {
+      clip-path: polygon(24px 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .clip-hexagon {
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+    .clip-product-tab {
+      clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+    }
+
+    /* Metallic Sheen Sweep Effect */
+    .sheen-effect {
+      position: relative;
+      overflow: hidden;
+    }
+    .sheen-effect::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -110%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.38) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-22deg);
+      transition: left 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+      pointer-events: none;
+    }
+    .sheen-effect:hover::after,
+    .sheen-effect:active::after {
+      left: 140%;
+    }
+
+    /* Touch Active Feedback */
+    .touch-scale:active {
+      transform: scale(0.97);
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity;
+    }
+    .reveal-up { transform: translateY(36px); }
+    .reveal-left { transform: translateX(-40px); }
+    .reveal-right { transform: translateX(40px); }
+    .reveal-zoom { transform: scale(0.9); }
+    .reveal.active {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    /* 3D Flip Card Styles for Digital Visiting Card */
+    .perspective-1000 {
+      perspective: 1200px;
+    }
+    .transform-style-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.75s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    .flipped {
+      transform: rotateY(180deg);
+    }
+
+    /* Custom Thumb-Friendly Range Slider for Mobile */
+    input[type="range"].mobile-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 10px;
+      border-radius: 999px;
+      background: #27272a;
+      outline: none;
+    }
+    input[type="range"].mobile-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #d91c24;
+      border: 3px solid #ffffff;
+      box-shadow: 0 2px 10px rgba(217, 28, 36, 0.6);
+      cursor: pointer;
+    }
+    input[type="range"].mobile-slider::-moz-range-thumb {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #d91c24;
+      border: 3px solid #ffffff;
+      box-shadow: 0 2px 10px rgba(217, 28, 36, 0.6);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 font-sans selection:bg-red-600 selection:text-white overflow-x-hidden pb-20 lg:pb-0">
+
+  <!-- ==========================================
+       1. TOP UTILITY BAR (DESKTOP) & STICKY COMPACT MOBILE HEADER
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-zinc-200 transition-all duration-300">
+    <!-- Top Angled Crimson Bar (Desktop & Tablet) -->
+    <div class="hidden sm:flex w-full bg-white justify-end">
+      <div class="w-full lg:w-9/12 bg-gradient-to-r from-red-700 via-crimson-600 to-red-700 text-white py-1.5 px-6 clip-top-bar flex items-center justify-between text-xs font-medium">
+        <div class="flex items-center space-x-4">
+          <span class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5 text-yellow-300 animate-bounce"></i>
+            <a href="tel:7742144097" class="hover:text-yellow-300">7742144097</a>
+            <span class="opacity-50">|</span>
+            <a href="tel:9175852929" class="hover:text-yellow-300">9175852929</a>
+          </span>
+          <span class="hidden md:flex items-center gap-1 text-red-100">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-yellow-300"></i>
+            <span>Padavalarevu, Vijayawada - 520 004</span>
+          </span>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="inline-flex items-center gap-1 bg-black/30 px-2.5 py-0.5 rounded text-[11px] font-bold uppercase border border-white/15">
+            <i data-lucide="award" class="w-3 h-3 text-yellow-300"></i> Jindal 202 & 304 Grade
+          </span>
+          <button
+            onclick="openVisitingCardModal()"
+            class="flex items-center gap-1 bg-yellow-400 hover:bg-yellow-300 text-zinc-950 px-2.5 py-0.5 rounded font-extrabold text-xs transition shadow cursor-pointer"
+          >
+            <i data-lucide="credit-card" class="w-3.5 h-3.5"></i>
+            <span>3D Visiting Card</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Compact Mobile-First Header -->
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-2.5 group min-w-0">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-crimson-600 via-red-700 to-zinc-900 flex flex-col items-center justify-center text-white font-black shadow-md shrink-0">
+          <span class="text-base sm:text-xl leading-none tracking-tighter">SK</span>
+          <span class="text-[7px] sm:text-[8px] tracking-widest text-yellow-300 font-bold">STEEL</span>
+        </div>
+        <div class="truncate">
+          <div class="flex items-center gap-1.5">
+            <span class="text-base sm:text-2xl font-black tracking-tight text-crimson-600 truncate">
+              SHREE KRISHNA
+            </span>
+          </div>
+          <p class="text-[9px] sm:text-xs font-extrabold tracking-wider uppercase text-zinc-600 truncate -mt-0.5">
+            STEEL & GLASS RAILING WORKS
+          </p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-7 text-xs font-extrabold uppercase tracking-wider text-zinc-700">
+        <a href="#about" class="hover:text-crimson-600 transition py-1">About Us</a>
+        <a href="#services" class="hover:text-crimson-600 transition py-1">Glass & SS Railings</a>
+        <a href="#estimator" class="hover:text-crimson-600 transition py-1 flex items-center gap-1 text-crimson-600">
+          <i data-lucide="compass" class="w-4 h-4"></i> Plan Project
+        </a>
+        <a href="#products" class="hover:text-crimson-600 transition py-1">Products</a>
+        <a href="#gallery" class="hover:text-crimson-600 transition py-1">Gallery</a>
+      </nav>
+
+      <!-- Mobile Quick Actions + Hamburger -->
+      <div class="flex items-center gap-2 shrink-0">
+        <!-- Mobile Jindal 202/304 Pill -->
+        <span class="hidden xs:inline-flex sm:hidden items-center gap-1 bg-zinc-100 border border-zinc-300 text-zinc-800 px-2 py-1 rounded-md text-[10px] font-extrabold">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Jindal 202/304
+        </span>
+
+        <!-- Mobile Quick 3D Card Button -->
+        <button
+          onclick="openVisitingCardModal()"
+          class="sm:hidden touch-scale bg-amber-400 active:bg-amber-500 text-zinc-950 font-black text-[11px] px-2.5 py-2 rounded-lg shadow flex items-center gap-1 cursor-pointer"
+          aria-label="Open 3D Visiting Card"
+        >
+          <i data-lucide="credit-card" class="w-3.5 h-3.5 text-red-700"></i>
+          <span>3D Card</span>
+        </button>
+
+        <!-- Desktop Request Quote CTA -->
+        <a
+          href="#quote-section"
+          class="hidden sm:flex sheen-effect bg-crimson-600 hover:bg-red-700 text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-5 py-3 rounded-lg shadow-lg shadow-red-600/25 items-center gap-1.5 transition"
+        >
+          <span>Request A Quote</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+
+        <!-- Mobile Slide-Out Drawer Trigger -->
+        <button
+          onclick="openMobileDrawer()"
+          class="lg:hidden touch-scale p-2.5 rounded-xl bg-zinc-900 text-white hover:bg-crimson-600 transition cursor-pointer"
+          aria-label="Open Menu"
+        >
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SLIDE-OUT MOBILE DRAWER MENU
+       ========================================== -->
+  <div id="mobile-drawer-backdrop" onclick="closeMobileDrawer()" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
+  <aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-80 max-w-[85vw] bg-charcoal text-white shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between overflow-y-auto">
+    <div class="p-5 space-y-5">
+      <!-- Drawer Top Header -->
+      <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-yellow-400 block">Proprietor: Vikash Kumar</span>
+          <p class="font-black text-base text-white">Shree Krishna Steel Works</p>
+        </div>
+        <button onclick="closeMobileDrawer()" class="p-2 rounded-lg bg-zinc-800 text-zinc-300 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Jindal Partner Banner -->
+      <div class="bg-gradient-to-r from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl p-3.5 flex items-center justify-between">
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-wider text-zinc-400">Authorized Material</p>
+          <p class="text-sm font-black text-white">Jindal Steel & Power</p>
+          <p class="text-[11px] text-yellow-400 font-bold">SS 202 & 304 Grade Available</p>
+        </div>
+        <button
+          onclick="closeMobileDrawer(); openVisitingCardModal();"
+          class="bg-crimson-600 text-white text-xs font-extrabold px-3 py-2 rounded-lg shadow"
+        >
+          View Card
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="space-y-1 text-sm font-bold">
+        <a href="#hero" onclick="closeMobileDrawer()" class="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-zinc-800/80 transition">
+          <span class="flex items-center gap-3"><i data-lucide="home" class="w-4 h-4 text-red-500"></i> Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        </a>
+        <a href="#estimator" onclick="closeMobileDrawer()" class="flex items-center justify-between py-3 px-3 rounded-lg bg-red-600/15 border border-red-500/30 text-yellow-300 transition">
+          <span class="flex items-center gap-3"><i data-lucide="compass" class="w-4 h-4 text-red-400"></i> Custom Project Planner</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#products" onclick="closeMobileDrawer()" class="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-zinc-800/80 transition">
+          <span class="flex items-center gap-3"><i data-lucide="layers" class="w-4 h-4 text-red-500"></i> Our Products Catalog</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        </a>
+        <a href="#services" onclick="closeMobileDrawer()" class="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-zinc-800/80 transition">
+          <span class="flex items-center gap-3"><i data-lucide="shield-check" class="w-4 h-4 text-red-500"></i> Glass & Balcony Railings</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        </a>
+        <a href="#gallery" onclick="closeMobileDrawer()" class="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-zinc-800/80 transition">
+          <span class="flex items-center gap-3"><i data-lucide="image" class="w-4 h-4 text-red-500"></i>Vijayawada Project Gallery</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        </a>
+        <a href="#about" onclick="closeMobileDrawer()" class="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-zinc-800/80 transition">
+          <span class="flex items-center gap-3"><i data-lucide="award" class="w-4 h-4 text-red-500"></i> About Vikash Kumar</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        </a>
+        <a href="#quote-section" onclick="closeMobileDrawer()" class="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-zinc-800/80 transition">
+          <span class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-red-500"></i> Workshop Directions & Quote</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Drawer Bottom Contact Actions -->
+    <div class="p-5 border-t border-zinc-800 space-y-2.5 bg-zinc-950">
+      <p class="text-[11px] text-zinc-400 leading-snug">
+        <strong class="text-white">Workshop:</strong> # 45-1-53A, Beside Mosque, Opp. Indian Petrol Bunk, Padavalarevu, Vijayawada-520004
+      </p>
+      <div class="grid grid-cols-2 gap-2 pt-1">
+        <a href="tel:7742144097" class="bg-crimson-600 text-white font-extrabold text-xs py-3 rounded-xl flex items-center justify-center gap-1.5 shadow">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i> 7742144097
+        </a>
+        <a href="tel:9175852929" class="bg-zinc-800 text-white font-extrabold text-xs py-3 rounded-xl flex items-center justify-center gap-1.5 border border-zinc-700">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-yellow-400"></i> 9175852929
+        </a>
+      </div>
+      <button
+        onclick="downloadVCard()"
+        class="w-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-yellow-400 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5"
+      >
+        <i data-lucide="user-plus" class="w-4 h-4"></i> Save Contact to Phone (.vcf)
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       2. MOBILE-OPTIMIZED HERO SECTION + SPARKS CANVAS
+       ========================================== -->
+  <section id="hero" class="relative bg-charcoal text-white">
+    <div class="relative pt-5 pb-24 sm:pt-12 sm:pb-36 lg:pb-44 overflow-hidden">
+      <!-- Industrial Background -->
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-25 scale-105"
+        style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80');"
+      ></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-charcoal/95 via-charcoal/90 to-charcoal"></div>
+
+      <!-- Interactive HTML5 Canvas Welding Sparks -->
+      <canvas id="sparks-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-10"></canvas>
+
+      <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Horizontally Scrollable Quick Service Pills (Mobile-First Touch Strip) -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-3 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <a href="#products" onclick="filterProducts('Gates & Grills')" class="shrink-0 bg-white/10 hover:bg-crimson-600 border border-white/15 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-sm transition">
+            <i data-lucide="shield" class="w-3 h-3 text-yellow-400"></i> SS Main Gates
+          </a>
+          <a href="#products" onclick="filterProducts('Glass Railings')" class="shrink-0 bg-white/10 hover:bg-crimson-600 border border-white/15 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-sm transition">
+            <i data-lucide="sparkles" class="w-3 h-3 text-yellow-400"></i> Toughened Glass Railing
+          </a>
+          <a href="#products" onclick="filterProducts('SS Railings')" class="shrink-0 bg-white/10 hover:bg-crimson-600 border border-white/15 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-sm transition">
+            <i data-lucide="trending-up" class="w-3 h-3 text-yellow-400"></i> Duplex Staircase
+          </a>
+          <a href="#estimator" class="shrink-0 bg-crimson-600/30 border border-red-500/40 text-yellow-300 text-[11px] font-extrabold px-3.5 py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-sm">
+            <i data-lucide="award" class="w-3 h-3"></i> Jindal 202 & 304 Grade
+          </a>
+          <a href="#products" onclick="filterProducts('Furniture & Letters')" class="shrink-0 bg-white/10 hover:bg-crimson-600 border border-white/15 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-sm transition">
+            <i data-lucide="type" class="w-3 h-3 text-yellow-400"></i> Steel Letters & Furniture
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          
+          <!-- Left Column: Mobile-Optimized Headline, CTAs & Compact 3-Column Stats -->
+          <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+            <div class="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/40 text-red-300 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+              <span>Padavalarevu, Vijayawada • Prop: Vikash Kumar</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase leading-[1.08] tracking-tight">
+              <span class="block text-zinc-200 font-light text-xl sm:text-3xl mb-1">
+                STAINLESS STEEL & GLASS
+              </span>
+              <span>RAILING </span>
+              <span class="metallic-shimmer-text">FABRICATION</span>
+            </h1>
+
+            <p class="text-zinc-300 text-sm sm:text-lg max-w-2xl leading-relaxed">
+              Mfg. of all kinds of <strong class="text-white">Stainless Steel Railings, Toughened Glass Railings & Steel Furniture in 202 & 304 Grade</strong>. Attractive design, superior <strong class="text-yellow-400">Jindal Steel & Power</strong> quality, extra-long life, Steel Letters & Grills.
+            </p>
+
+            <!-- Big Thumb-Friendly Mobile CTA Buttons -->
+            <div class="grid grid-cols-1 sm:flex sm:flex-wrap gap-3 pt-1">
+              <button
+                onclick="sendWhatsApp('Hello Vikash Kumar ji (Shree Krishna Steel Railing Works), I would like to plan my railing/gate project and discuss custom designs on WhatsApp.')"
+                class="sheen-effect touch-scale w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-black uppercase tracking-wider px-6 py-4 rounded-xl shadow-xl shadow-green-600/25 flex items-center justify-center gap-2.5 text-xs sm:text-sm transition cursor-pointer"
+              >
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Plan Project on WhatsApp</span>
+              </button>
+
+              <a
+                href="tel:+917742144097"
+                class="sheen-effect touch-scale w-full sm:w-auto bg-crimson-600 hover:bg-red-700 text-white font-black uppercase tracking-wider px-6 py-4 rounded-xl shadow-xl shadow-red-600/30 flex items-center justify-center gap-2.5 text-xs sm:text-sm transition"
+              >
+                <i data-lucide="phone-call" class="w-4 h-4 text-yellow-300"></i>
+                <span>Call 7742144097 / 9175852929</span>
+              </a>
+            </div>
+
+            <!-- Compact 3-Column Animated Stat Strip (Fits 1 Row on Mobile) -->
+            <div id="hero-counters" class="pt-3 grid grid-cols-3 gap-2.5 sm:gap-4 max-w-xl">
+              <div class="bg-zinc-900/85 border border-zinc-800 p-2.5 sm:p-3.5 rounded-xl text-center sm:text-left">
+                <div class="text-crimson-500 font-black text-xl sm:text-3xl leading-none">
+                  <span class="counter-value" data-target="12">0</span>+ Yrs
+                </div>
+                <p class="text-zinc-400 text-[10px] sm:text-xs font-semibold mt-1">Experience</p>
+              </div>
+              <div class="bg-zinc-900/85 border border-zinc-800 p-2.5 sm:p-3.5 rounded-xl text-center sm:text-left">
+                <div class="text-yellow-400 font-black text-xl sm:text-3xl leading-none">
+                  <span class="counter-value" data-target="1500">0</span>+
+                </div>
+                <p class="text-zinc-400 text-[10px] sm:text-xs font-semibold mt-1">Vijayawada Sites</p>
+              </div>
+              <div class="bg-zinc-900/85 border border-zinc-800 p-2.5 sm:p-3.5 rounded-xl text-center sm:text-left">
+                <div class="text-emerald-400 font-black text-xl sm:text-3xl leading-none">
+                  <span class="counter-value" data-target="100">0</span>%
+                </div>
+                <p class="text-zinc-400 text-[10px] sm:text-xs font-semibold mt-1">Jindal 202/304</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Showcase Card + Jindal Badge -->
+          <div class="lg:col-span-5 relative flex justify-center">
+            <div class="relative w-full max-w-md sm:animate-float">
+              <div class="absolute -inset-2 bg-gradient-to-tr from-crimson-600 via-red-500 to-amber-500 rounded-2xl transform rotate-2 opacity-40 blur-md"></div>
+
+              <div
+                onclick="openVisitingCardModal()"
+                class="relative bg-zinc-900 border-2 border-zinc-700 rounded-2xl overflow-hidden shadow-2xl cursor-pointer group"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+                  alt="Shree Krishna Toughened Glass & SS Railing"
+                  class="w-full h-56 sm:h-80 object-cover group-hover:scale-105 transition duration-700"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/35 to-transparent"></div>
+
+                <!-- Top Right Jindal Steel & Power Badge -->
+                <div class="absolute top-3 right-3 bg-white/95 text-zinc-900 px-3 py-1.5 rounded-lg shadow-xl border-l-4 border-crimson-600">
+                  <div class="flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+                    <span class="w-2 h-2 rounded-full bg-green-600"></span>
+                    <span class="font-black italic tracking-tight text-xs sm:text-sm">JINDAL</span>
+                  </div>
+                  <p class="text-[8px] font-extrabold tracking-widest text-zinc-600 uppercase">
+                    STEEL & POWER
+                  </p>
+                </div>
+
+                <!-- Top Left Grade Pill -->
+                <div class="absolute top-3 left-3 bg-crimson-600 text-white text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full shadow">
+                  202 & 304 Grade
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="absolute bottom-0 inset-x-0 p-4 sm:p-5 flex items-end justify-between gap-2">
+                  <div>
+                    <span class="text-[10px] font-extrabold uppercase tracking-widest text-yellow-400 block">
+                      Tap to Flip Visiting Card
+                    </span>
+                    <h2 class="text-sm sm:text-lg font-black text-white leading-tight">
+                      SS 304 Glass Railings, Main Gates & Furniture
+                    </h2>
+                  </div>
+                  <span class="bg-crimson-600 text-white text-[11px] font-extrabold px-3 py-2 rounded-lg shadow shrink-0 flex items-center gap-1">
+                    <i data-lucide="credit-card" class="w-3.5 h-3.5"></i> Card
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+       4. INTERACTIVE CUSTOM PROJECT PLANNER & SPEC BUILDER
+       ========================================== -->
+  <section id="estimator" class="py-14 sm:py-20 bg-zinc-950 text-white relative overflow-hidden border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 reveal reveal-up">
+        <span class="inline-flex items-center gap-1.5 bg-red-600/20 border border-red-500/30 text-red-400 px-3.5 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-widest mb-2">
+          <i data-lucide="compass" class="w-3.5 h-3.5 text-yellow-400"></i> Interactive Spec Configurator
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight">
+          CUSTOM PROJECT PLANNER <span class="font-light text-zinc-300">& SPEC BUILDER</span>
+        </h2>
+        <div class="w-14 h-1 bg-crimson-600 mx-auto mt-2.5 mb-3"></div>
+        <p class="text-zinc-400 text-xs sm:text-base">
+          Select your work category, compare <strong>Jindal 202 vs 304 Grade</strong> specifications, and set your approximate scale to build a custom project blueprint for discussion.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+        
+        <!-- Left Touch Controls -->
+        <div class="lg:col-span-7 bg-zinc-900 border border-zinc-800 rounded-2xl p-4 sm:p-7 space-y-6 reveal reveal-left">
+          <!-- Step 1: Select Work Category -->
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-zinc-400 mb-2.5">
+              1. Select Work Category
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5" id="calc-product-buttons">
+              <button
+                type="button"
+                onclick="setEstimatorProduct('ss_railing', this)"
+                class="calc-prod-btn touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-zinc-950 border-zinc-800 text-zinc-300"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <i data-lucide="align-justify" class="w-4 h-4 text-red-400"></i>
+                </div>
+                <p class="font-extrabold text-xs sm:text-sm leading-tight">SS Railing</p>
+                <p class="text-[10px] text-zinc-400 mt-0.5">Balcony & Terrace</p>
+              </button>
+
+              <button
+                type="button"
+                onclick="setEstimatorProduct('glass_railing', this)"
+                class="calc-prod-btn touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-crimson-600/20 border-crimson-500 text-white"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-yellow-400"></i>
+                  <span class="text-[9px] uppercase font-black bg-crimson-600 px-1.5 py-0.5 rounded">Popular</span>
+                </div>
+                <p class="font-extrabold text-xs sm:text-sm leading-tight">Toughened Glass Railing</p>
+                <p class="text-[10px] text-zinc-400 mt-0.5">10/12mm + SS 304</p>
+              </button>
+
+              <button
+                type="button"
+                onclick="setEstimatorProduct('main_gate', this)"
+                class="calc-prod-btn touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-zinc-950 border-zinc-800 text-zinc-300"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-red-400"></i>
+                </div>
+                <p class="font-extrabold text-xs sm:text-sm leading-tight">Main Designer Gate</p>
+                <p class="text-[10px] text-zinc-400 mt-0.5">Laser-Cut & Heavy Pipe</p>
+              </button>
+
+              <button
+                type="button"
+                onclick="setEstimatorProduct('duplex_staircase', this)"
+                class="calc-prod-btn touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-zinc-950 border-zinc-800 text-zinc-300"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <i data-lucide="trending-up" class="w-4 h-4 text-red-400"></i>
+                </div>
+                <p class="font-extrabold text-xs sm:text-sm leading-tight">Duplex Staircase</p>
+                <p class="text-[10px] text-zinc-400 mt-0.5">Curved & Multi-Bar</p>
+              </button>
+
+              <button
+                type="button"
+                onclick="setEstimatorProduct('letters_grill', this)"
+                class="calc-prod-btn touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-zinc-950 border-zinc-800 text-zinc-300 col-span-2 sm:col-span-2"
+              >
+                <div class="flex items-center justify-between mb-1">
+                  <i data-lucide="armchair" class="w-4 h-4 text-red-400"></i>
+                  <span class="text-[9px] uppercase font-bold text-yellow-400">Custom Built</span>
+                </div>
+                <p class="font-extrabold text-xs sm:text-sm leading-tight">Laser Cut Letters / Grill & SS Furniture</p>
+                <p class="text-[10px] text-zinc-400 mt-0.5">3D Building Names, Security Grills & Tables (202/304)</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Big Toggle Switch for 202 vs 304 Grade -->
+          <div>
+            <label class="block text-xs font-extrabold uppercase tracking-wider text-zinc-400 mb-2.5">
+              2. Select Jindal Steel Grade
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <button
+                type="button"
+                id="grade-btn-202"
+                onclick="setEstimatorGrade('202')"
+                class="touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-zinc-950 border-zinc-800 text-zinc-300"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="font-black text-sm sm:text-base">202 Grade Indoor Classic</span>
+                  <span class="text-[9px] uppercase px-2 py-0.5 rounded bg-zinc-800 text-zinc-200 font-bold">Indoor</span>
+                </div>
+                <p class="text-[11px] mt-1 opacity-85 leading-snug">High strength & mirror shine for indoor stairs & furniture.</p>
+              </button>
+
+              <button
+                type="button"
+                id="grade-btn-304"
+                onclick="setEstimatorGrade('304')"
+                class="touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-crimson-600 border-red-500 text-white shadow-lg shadow-red-600/25"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="font-black text-sm sm:text-base">304 Grade Weatherproof Exterior</span>
+                  <span class="text-[9px] uppercase px-2 py-0.5 rounded bg-yellow-400 text-zinc-950 font-black">Rust-Free</span>
+                </div>
+                <p class="text-[11px] mt-1 opacity-95 leading-snug">100% weather & monsoon proof for outdoor balconies & gates.</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Large Touch Slider for Running Feet (10 to 500 Rft) + Finish -->
+          <div class="space-y-4 pt-1">
+            <div class="bg-zinc-950 p-4 rounded-xl border border-zinc-800">
+              <div class="flex justify-between items-center mb-3">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-zinc-400">3. Approximate Scale / Area</span>
+                <span class="text-base sm:text-lg font-black text-yellow-400 bg-red-600/20 border border-red-500/30 px-3 py-0.5 rounded-lg" id="calc-length-label">
+                  45 Rft
+                </span>
+              </div>
+              <input
+                type="range"
+                id="calc-length"
+                min="10"
+                max="500"
+                step="5"
+                value="45"
+                oninput="updateEstimator()"
+                class="w-full mobile-slider"
+              />
+              <div class="flex justify-between text-[10px] text-zinc-500 font-bold mt-2">
+                <span>10 Rft</span>
+                <span>150 Rft</span>
+                <span>300 Rft</span>
+                <span>500 Rft</span>
+              </div>
+            </div>
+
+            <div>
+              <label for="calc-finish" class="block text-xs font-extrabold uppercase tracking-wider text-zinc-400 mb-2">
+                4. Preferred Surface Finish
+              </label>
+              <select
+                id="calc-finish"
+                onchange="updateEstimator()"
+                class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-4 py-3.5 text-xs sm:text-sm font-bold text-white focus:outline-none focus:border-red-500"
+              >
+                <option value="High-Gloss Mirror Polish">High-Gloss Mirror Polish (Signature Shine)</option>
+                <option value="Brushed Matte / Hairline">Brushed Matte / Architectural Hairline Finish</option>
+                <option value="PVD Gold / Rose Gold">Luxury PVD Titanium Gold / Rose Gold Finish</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Custom Project Blueprint Summary Card (Zero Rupee / Cool Craftsmanship Phrase) -->
+        <div class="lg:col-span-5 bg-gradient-to-br from-crimson-600 via-red-700 to-zinc-950 rounded-2xl p-5 sm:p-8 flex flex-col justify-between shadow-2xl border border-red-500/40 reveal reveal-right">
+          <div class="space-y-4">
+            <div class="flex items-start justify-between border-b border-white/20 pb-4 gap-3">
+              <div>
+                <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-black uppercase tracking-widest bg-black/35 text-yellow-300 px-3 py-1 rounded-full border border-yellow-400/30">
+                  <i data-lucide="flame" class="w-3.5 h-3.5"></i> BESPOKE WORKSHOP CONSULTATION
+                </span>
+                <h3 class="font-oswald text-2xl sm:text-3xl font-bold uppercase tracking-wide text-white mt-3 leading-tight">
+                  “Every Masterpiece Has Its Own Blueprint — Let’s Craft Yours Over a Quick Call!”
+                </h3>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-red-50/95 leading-relaxed">
+              Great architecture isn't priced off a shelf. Because gauge thickness, glass tint, and site dimensions make every project unique, speak directly with <strong class="text-yellow-300">Vikash Kumar</strong> for complimentary on-site measurement, design planning, and our best direct-from-factory deal.
+            </p>
+
+            <!-- Dynamic Spec Summary Pills -->
+            <div class="bg-black/40 rounded-xl p-4 space-y-2.5 border border-white/10">
+              <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-zinc-400 border-b border-white/10 pb-1.5">
+                <span>Your Custom Project Blueprint</span>
+                <span class="text-yellow-300">Jindal Steel & Power</span>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span id="spec-pill-category" class="bg-white/15 border border-white/20 text-white text-xs font-extrabold px-3 py-1.5 rounded-lg">
+                  Toughened Glass Railing
+                </span>
+                <span id="spec-pill-grade" class="bg-amber-400 text-zinc-950 text-xs font-black px-3 py-1.5 rounded-lg">
+                  304 Grade Weatherproof Exterior
+                </span>
+                <span id="spec-pill-scale" class="bg-crimson-600 border border-red-400 text-white text-xs font-extrabold px-3 py-1.5 rounded-lg">
+                  Est. Scale: 45 Rft
+                </span>
+                <span id="spec-pill-finish" class="bg-zinc-900/90 border border-zinc-700 text-zinc-200 text-[11px] font-bold px-3 py-1 rounded-lg">
+                  High-Gloss Mirror Polish
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-5">
+            <a
+              href="tel:+917742144097"
+              class="sheen-effect touch-scale w-full bg-zinc-950 hover:bg-black text-white font-black uppercase tracking-wider py-4 px-5 rounded-xl shadow-xl flex items-center justify-center gap-2 text-xs sm:text-sm transition border border-zinc-700"
+            >
+              <i data-lucide="phone-call" class="w-4 h-4 text-yellow-400 animate-pulse"></i>
+              <span>Call Vikash to Plan & Discuss (7742144097)</span>
+            </a>
+
+            <button
+              type="button"
+              onclick="sendEstimatorToWhatsApp()"
+              class="sheen-effect touch-scale w-full bg-green-600 hover:bg-green-500 text-white font-black uppercase tracking-wider py-4 px-5 rounded-xl shadow-xl flex items-center justify-center gap-2 text-xs sm:text-sm transition cursor-pointer"
+            >
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>Send My Specs on WhatsApp for Best Deal</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. OUR PRODUCTS SECTION (MOBILE SWIPE CAROUSEL + VIEW ALL TOGGLE)
+       ========================================== -->
+  <section id="products" class="py-16 sm:py-24 brushed-metal border-b border-zinc-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center mb-6 sm:mb-10 reveal reveal-up">
+        <h2 class="text-2xl sm:text-4xl uppercase tracking-tight text-zinc-900">
+          <span class="font-black">OUR</span>
+          <span class="font-light text-zinc-700">PRODUCTS</span>
+        </h2>
+        <div class="w-12 h-1 bg-crimson-600 mx-auto mt-2"></div>
+        <p class="text-zinc-600 text-xs sm:text-base mt-2.5 max-w-2xl mx-auto">
+          All kinds of Stainless Steel Railings, Toughened Glass Railings, Main Gates, Steel Furniture (202 & 304 Grade), Letters & Grills.
+        </p>
+      </div>
+
+      <!-- Horizontally Scrollable Filter Pills + Mobile View Toggle -->
+      <div class="flex items-center justify-between gap-2 mb-6">
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-4 px-4 sm:mx-0 sm:px-0" id="product-filters">
+          <button onclick="filterProducts('All', this)" class="prod-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition cursor-pointer bg-crimson-600 text-white shadow">All (6)</button>
+          <button onclick="filterProducts('Glass Railings', this)" class="prod-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition cursor-pointer bg-white text-zinc-800 border border-zinc-300">Glass Railings</button>
+          <button onclick="filterProducts('SS Railings', this)" class="prod-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition cursor-pointer bg-white text-zinc-800 border border-zinc-300">SS 202/304 Railings</button>
+          <button onclick="filterProducts('Gates & Grills', this)" class="prod-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition cursor-pointer bg-white text-zinc-800 border border-zinc-300">Main Gates</button>
+          <button onclick="filterProducts('Furniture & Letters', this)" class="prod-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition cursor-pointer bg-white text-zinc-800 border border-zinc-300">Furniture & Letters</button>
+        </div>
+
+        <!-- Mobile Swipe vs Grid Toggle Button -->
+        <button
+          id="toggle-product-layout-btn"
+          onclick="toggleProductMobileLayout()"
+          class="md:hidden shrink-0 bg-zinc-900 text-white text-[11px] font-bold px-3 py-2 rounded-xl flex items-center gap-1 shadow cursor-pointer"
+        >
+          <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-yellow-400"></i>
+          <span id="toggle-layout-text">Grid View</span>
+        </button>
+      </div>
+
+      <!-- Mobile Swipe Hint Bar -->
+      <div id="product-swipe-hint" class="flex md:hidden items-center justify-between text-[11px] text-zinc-600 font-bold mb-3">
+        <span class="flex items-center gap-1"><i data-lucide="hand" class="w-3.5 h-3.5 text-crimson-600"></i> Swipe products horizontally</span>
+        <span class="text-crimson-600" onclick="toggleProductMobileLayout()">Tap for All Grid →</span>
+      </div>
+
+      <!-- Dynamic Products Container (Horizontal Snap Carousel on Mobile by default, 3-Col Grid on Desktop) -->
+      <div
+        id="products-grid"
+        class="flex md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto md:overflow-visible snap-carousel no-scrollbar gap-4 sm:gap-7 -mx-4 px-4 sm:mx-0 sm:px-0 pb-4"
+      >
+        <!-- Populated via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. ABOUT US WITH HEXAGONAL FRAME (SAMPLE WEBSITE MATCH)
+       ========================================== -->
+  <section id="about" class="py-16 sm:py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Side: Hexagonal Frame -->
+        <div class="lg:col-span-6 flex justify-center relative reveal reveal-left">
+          <div class="relative w-68 h-60 sm:w-96 sm:h-84 flex items-center justify-center">
+            <div class="absolute -inset-2 bg-gradient-to-r from-crimson-600 via-yellow-500 to-crimson-600 clip-hexagon opacity-90 shadow-2xl"></div>
+            <div class="absolute inset-1 bg-white clip-hexagon"></div>
+
+            <div class="relative w-[92%] h-[92%] clip-hexagon overflow-hidden shadow-xl group">
+              <img
+                src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=900&q=80"
+                alt="Shree Krishna Steel Gate & Railing Fabrication"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-center pb-4">
+                <span class="text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-widest px-3 py-1 bg-crimson-600 rounded shadow">
+                  Padavalarevu, Vijayawada
+                </span>
+              </div>
+            </div>
+
+            <!-- Proprietor Floating Badge -->
+            <div class="absolute -bottom-5 right-0 sm:right-2 bg-zinc-900 text-white p-3.5 rounded-xl shadow-2xl border-l-4 border-crimson-600">
+              <p class="text-[9px] uppercase tracking-widest text-zinc-400 font-bold">Proprietor</p>
+              <p class="text-sm sm:text-base font-black text-white">Vikash Kumar</p>
+              <a href="tel:7742144097" class="text-[11px] text-yellow-400 font-bold flex items-center gap-1">
+                <i data-lucide="phone" class="w-3 h-3"></i> 7742144097
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: About Text -->
+        <div class="lg:col-span-6 space-y-4 sm:space-y-5 reveal reveal-right">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-black uppercase tracking-widest text-crimson-600">
+              SUPERIOR STEEL QUALITY • EXTRA LONG LIFE
+            </span>
+            <span class="w-8 h-0.5 bg-crimson-600"></span>
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-light text-zinc-800 uppercase tracking-tight">
+            ABOUT <span class="font-black text-zinc-950">SHREE KRISHNA WORKS</span>
+          </h2>
+
+          <p class="text-zinc-600 leading-relaxed text-xs sm:text-base">
+            Led by <strong class="text-zinc-900">Vikash Kumar</strong>, <strong class="text-crimson-600">Shree Krishna Steel Railing & Glass Railing Works</strong> is a premier stainless steel and glass railing fabricator located at <strong># 45-1-53A, Beside Mosque, Opp. Indian Petrol Bunk, Padavalarevu, Vijayawada - 520 004</strong>.
+          </p>
+
+          <p class="text-zinc-600 leading-relaxed text-xs sm:text-base">
+            We manufacture all kinds of <strong>202 & 304 Grade Stainless Steel Railings, Toughened Glass Staircase & Balcony Railings, Main Gates, Spiral Staircases, Steel Furniture, Letters, and Grills</strong> using authentic <strong>Jindal Steel & Power</strong> material.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2.5 pt-1">
+            <div class="flex items-center gap-2 bg-zinc-50 p-3 rounded-xl border border-zinc-200 text-xs font-bold text-zinc-800">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-crimson-600 shrink-0"></i>
+              <span>Jindal 202 & 304 Grade</span>
+            </div>
+            <div class="flex items-center gap-2 bg-zinc-50 p-3 rounded-xl border border-zinc-200 text-xs font-bold text-zinc-800">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-crimson-600 shrink-0"></i>
+              <span>10mm/12mm Glass Railing</span>
+            </div>
+            <div class="flex items-center gap-2 bg-zinc-50 p-3 rounded-xl border border-zinc-200 text-xs font-bold text-zinc-800">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-crimson-600 shrink-0"></i>
+              <span>Attractive Custom Design</span>
+            </div>
+            <div class="flex items-center gap-2 bg-zinc-50 p-3 rounded-xl border border-zinc-200 text-xs font-bold text-zinc-800">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-crimson-600 shrink-0"></i>
+              <span>Steel Letters & Furniture</span>
+            </div>
+          </div>
+
+          <div class="pt-3 flex flex-wrap items-center gap-3">
+            <button
+              onclick="openVisitingCardModal()"
+              class="sheen-effect touch-scale bg-crimson-600 hover:bg-red-700 text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-lg flex items-center gap-2 cursor-pointer"
+            >
+              <i data-lucide="rotate-3d" class="w-4 h-4"></i>
+              <span>Open 3D Visiting Card</span>
+            </button>
+            <button
+              onclick="downloadVCard()"
+              class="touch-scale border-2 border-zinc-900 hover:bg-zinc-900 hover:text-white text-zinc-900 text-xs font-extrabold uppercase tracking-wider px-5 py-3 rounded-xl transition cursor-pointer flex items-center gap-1.5"
+            >
+              <i data-lucide="download" class="w-4 h-4 text-crimson-600"></i>
+              <span>Save Contact (.vcf)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. DIAGONAL SPLIT FEATURE SECTIONS (SAMPLE MATCH)
+       ========================================== -->
+  <section id="services" class="overflow-hidden">
+    <!-- SPLIT A: Glass & Balcony Railing -->
+    <div class="relative brushed-metal border-y border-zinc-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div class="lg:col-span-6 space-y-4 z-10 reveal reveal-left">
+            <span class="text-xs font-black uppercase tracking-widest text-crimson-600 block">
+              PANORAMIC STRENGTH & ELEGANCE
+            </span>
+            <h2 class="text-2xl sm:text-4xl uppercase tracking-tight text-zinc-900">
+              <span class="font-black">TOUGHENED GLASS</span>
+              <span class="font-light text-zinc-700">& BALCONY RAILINGS</span>
+            </h2>
+            <div class="w-12 h-1 bg-crimson-600"></div>
+            <p class="text-zinc-700 text-xs sm:text-base leading-relaxed">
+              Transform your staircase, duplex hall, or apartment balcony with <strong>10mm & 12mm Toughened Glass Railings</strong> mounted on heavy-duty <strong>SS 304 spigots, D-brackets, or concealed channels</strong>.
+            </p>
+            <div class="pt-2">
+              <button
+                onclick="sendWhatsApp('Hello Vikash Kumar ji, please share photos and prices for Toughened Glass Railing in Vijayawada.')"
+                class="sheen-effect touch-scale bg-crimson-600 hover:bg-red-700 text-white text-xs font-extrabold uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg inline-flex items-center gap-2 cursor-pointer"
+              >
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Get Glass Railing Designs on WhatsApp</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 relative flex justify-center items-center reveal reveal-right">
+            <div class="hidden lg:block absolute -right-28 -top-28 -bottom-28 w-96 bg-gradient-to-br from-crimson-600 via-red-700 to-zinc-900 transform -skew-x-12 shadow-2xl"></div>
+            <div class="relative z-10 w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2.5 bg-gradient-to-tr from-zinc-300 via-white to-zinc-400 shadow-2xl border-4 border-crimson-600">
+              <img
+                src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=900&q=80"
+                alt="Toughened Glass Railing"
+                class="w-full h-full object-cover rounded-full"
+              />
+              <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-zinc-950 text-white text-[11px] font-extrabold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-xl border border-red-500 whitespace-nowrap">
+                SS 304 + 12mm Toughened Glass
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. INTERACTIVE 2-COLUMN MOBILE MASONRY GALLERY + LIGHTBOX
+       ========================================== -->
+  <section id="gallery" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-6 sm:mb-10 reveal reveal-up">
+        <h2 class="text-2xl sm:text-4xl uppercase tracking-tight text-zinc-900">
+          <span class="font-black">PROJECT</span>
+          <span class="font-light text-zinc-700">GALLERY</span>
+        </h2>
+        <div class="w-12 h-1 bg-crimson-600 mx-auto mt-2"></div>
+        <p class="text-zinc-600 text-xs sm:text-base mt-2">
+          Tap any photo to zoom and discuss a similar custom installation for your space on WhatsApp.
+        </p>
+      </div>
+
+      <!-- Horizontally Scrollable Gallery Filter Pills -->
+      <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-5 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <button onclick="filterGallery('All', this)" class="gal-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-zinc-900 text-white cursor-pointer">All Photos</button>
+        <button onclick="filterGallery('Glass Railing', this)" class="gal-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-zinc-100 text-zinc-700 cursor-pointer">Glass Railing</button>
+        <button onclick="filterGallery('SS Gates', this)" class="gal-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-zinc-100 text-zinc-700 cursor-pointer">SS Gates</button>
+        <button onclick="filterGallery('Staircase', this)" class="gal-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-zinc-100 text-zinc-700 cursor-pointer">Staircase</button>
+        <button onclick="filterGallery('Balcony', this)" class="gal-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-zinc-100 text-zinc-700 cursor-pointer">Balcony</button>
+      </div>
+
+      <!-- 2-Column Mobile Masonry Grid -> 3-Column Desktop Grid -->
+      <div id="gallery-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
+        <!-- Populated via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. ONE-TAP GOOGLE MAPS DIRECTIONS + CRIMSON QUOTE BOX
+       ========================================== -->
+  <section id="quote-section" class="relative bg-zinc-900 text-white py-16 sm:py-24 overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-20"
+      style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');"
+    ></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-900/95 to-zinc-900/85"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Direct Call + One-Tap Google Maps Directions Card -->
+        <div class="lg:col-span-6 space-y-5 reveal reveal-left">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-red-500 block">
+              VISIT OR CALL US TODAY
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight mt-1">
+              REQUEST A <span class="font-light text-zinc-300">QUOTE</span>
+            </h2>
+            <div class="w-12 h-1 bg-crimson-600 mt-2.5"></div>
+          </div>
+
+          <p class="text-zinc-300 text-xs sm:text-base leading-relaxed">
+            Contact Proprietor <strong>Vikash Kumar</strong> for free site measurement, material inspection, and quotation anywhere in Vijayawada.
+          </p>
+
+          <!-- Phone Card -->
+          <div class="bg-zinc-950/90 p-4 rounded-2xl border border-zinc-800 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-crimson-600 text-white flex items-center justify-center shrink-0 shadow">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Vikash Kumar (Proprietor)</p>
+                <div class="flex flex-wrap items-center gap-2 mt-0.5">
+                  <a href="tel:7742144097" class="text-base sm:text-lg font-black text-white hover:text-yellow-400">7742144097</a>
+                  <span class="text-zinc-600">/</span>
+                  <a href="tel:9175852929" class="text-base sm:text-lg font-black text-white hover:text-yellow-400">9175852929</a>
+                </div>
+              </div>
+            </div>
+            <a href="tel:7742144097" class="bg-white text-zinc-950 font-extrabold text-xs px-3.5 py-2.5 rounded-xl shrink-0">
+              Call Now
+            </a>
+          </div>
+
+          <!-- One-Tap Google Maps Directions Card -->
+          <div class="bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 p-4 sm:p-5 rounded-2xl border border-zinc-700 space-y-3">
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-amber-400 text-zinc-950 flex items-center justify-center shrink-0 shadow">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-yellow-400 block">
+                  Workshop & Showroom Location
+                </span>
+                <p class="text-xs sm:text-sm font-bold text-white mt-0.5 leading-snug">
+                  # 45-1-53A, Beside Mosque, Opp. Indian Petrol Bunk, Padavalarevu, VIJAYAWADA - 520 004.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Padavalarevu+Indian+Petrol+Bunk+Vijayawada+520004"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="touch-scale w-full bg-zinc-800 hover:bg-zinc-700 text-yellow-300 font-extrabold text-xs uppercase tracking-wider py-3 px-4 rounded-xl flex items-center justify-center gap-2 border border-zinc-600 transition"
+            >
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Open Google Maps Directions</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Signature Crimson Red Form Box (Sample Website Match) -->
+        <div class="lg:col-span-6 reveal reveal-right">
+          <div class="bg-gradient-to-br from-crimson-600 to-red-800 p-6 sm:p-9 rounded-tl-3xl rounded-br-3xl rounded-tr-xl rounded-bl-xl shadow-2xl border border-red-400/40">
+            <form id="quote-form" onsubmit="handleQuoteSubmit(event)" class="space-y-3.5">
+              <h3 class="text-base sm:text-xl font-black uppercase tracking-wider text-white mb-1">
+                BOOK FREE SITE MEASUREMENT
+              </h3>
+
+              <input
+                type="text"
+                id="q-name"
+                required
+                placeholder="Your Full Name *"
+                class="w-full bg-black/20 border border-white/70 focus:border-yellow-300 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-100 focus:outline-none"
+              />
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <input
+                  type="tel"
+                  id="q-phone"
+                  required
+                  placeholder="Mobile / WhatsApp Number *"
+                  class="w-full bg-black/20 border border-white/70 focus:border-yellow-300 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-100 focus:outline-none"
+                />
+                <input
+                  type="text"
+                  id="q-location"
+                  placeholder="Area in Vijayawada"
+                  class="w-full bg-black/20 border border-white/70 focus:border-yellow-300 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-100 focus:outline-none"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <select
+                  id="q-service"
+                  class="w-full bg-red-800 border border-white/70 focus:border-yellow-300 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none"
+                >
+                  <option>Toughened Glass Railing System</option>
+                  <option>SS 202 / 304 Staircase Railing</option>
+                  <option>SS Designer Main Gate</option>
+                  <option>Steel Furniture (202 / 304 Grade)</option>
+                  <option>3D Steel Letters & Security Grills</option>
+                </select>
+
+                <select
+                  id="q-grade"
+                  class="w-full bg-red-800 border border-white/70 focus:border-yellow-300 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none"
+                >
+                  <option>Jindal 304 Grade (Rust-Proof)</option>
+                  <option>Jindal 202 Grade (Indoor Economy)</option>
+                  <option>Suggest Best Grade on Site</option>
+                </select>
+              </div>
+
+              <textarea
+                id="q-message"
+                rows="3"
+                placeholder="Requirement Details / Approx Running Feet..."
+                class="w-full bg-black/20 border border-white/70 focus:border-yellow-300 rounded-xl px-4 py-3 text-sm text-white placeholder-red-100 focus:outline-none"
+              ></textarea>
+
+              <button
+                type="submit"
+                class="sheen-effect touch-scale w-full bg-zinc-950 hover:bg-black text-white font-black text-xs sm:text-sm uppercase tracking-widest py-4 px-6 rounded-xl shadow-xl transition cursor-pointer flex items-center justify-center gap-2"
+              >
+                <i data-lucide="send" class="w-4 h-4 text-yellow-400"></i>
+                <span>SEND INQUIRY TO VIKASH KUMAR</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       10. DEEP BLACK FOOTER
+       ========================================== -->
+  <footer class="bg-charcoal text-zinc-400 border-t border-zinc-900 pt-12 pb-10 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-zinc-800">
+        <div class="space-y-2">
+          <span class="text-base font-black text-crimson-500">SHREE KRISHNA</span>
+          <p class="text-[11px] font-extrabold text-white uppercase tracking-wider">
+            STEEL RAILING & GLASS RAILING WORKS
+          </p>
+          <p class="text-zinc-400 leading-relaxed">
+            Mfg. of All Kinds of Stainless Steel Railing & Steel Furniture 202, 304 Grade. Attractive Design, Superior Steel Quality Extra Long Life, Steel Letters & Grills.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-white font-extrabold uppercase tracking-wider">Contact Proprietor</h4>
+          <p class="text-yellow-400 font-bold text-sm">Vikash Kumar</p>
+          <p class="text-white font-bold">Phone: <a href="tel:7742144097" class="underline">7742144097</a>, <a href="tel:9175852929" class="underline">9175852929</a></p>
+          <p class="text-zinc-300"># 45-1-53A, Beside Mosque, Opp. Indian Petrol Bunk, Padavalarevu, VIJAYAWADA-520 004.</p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-white font-extrabold uppercase tracking-wider">Quick Digital Tools</h4>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <button onclick="openVisitingCardModal()" class="bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-3.5 py-2 rounded-lg">
+              3D Visiting Card
+            </button>
+            <button onclick="downloadVCard()" class="bg-crimson-600 hover:bg-red-700 text-white font-bold px-3.5 py-2 rounded-lg">
+              Save Contact (.vcf)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 text-center text-zinc-500">
+        © 2026 Shree Krishna Steel Railing & Glass Railing Works, Vijayawada. Powered by Jindal 202 & 304 Grade Steel.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       11. STICKY APP-STYLE BOTTOM NAVIGATION BAR (MOBILE ONLY)
+       ========================================== -->
+  <nav
+    aria-label="Mobile Quick Action Bar"
+    class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-zinc-950/95 backdrop-blur-lg border-t border-zinc-800 px-2 py-1.5 shadow-[0_-8px_30px_rgba(0,0,0,0.6)]"
+  >
+    <div class="grid grid-cols-4 gap-1 max-w-md mx-auto">
+      <!-- 1. Call Vikash -->
+      <a
+        href="tel:+917742144097"
+        class="touch-scale flex flex-col items-center justify-center py-1.5 rounded-xl bg-crimson-600 text-white shadow-md"
+      >
+        <div class="relative">
+          <i data-lucide="phone-call" class="w-5 h-5 text-yellow-300 animate-pulse"></i>
+        </div>
+        <span class="text-[10px] font-black uppercase tracking-tight mt-0.5">Call Vikash</span>
+      </a>
+
+      <!-- 2. WhatsApp -->
+      <button
+        onclick="sendWhatsApp('Hello Vikash Kumar ji, I am viewing your website on my phone and would like to plan a project and discuss details.')"
+        class="touch-scale flex flex-col items-center justify-center py-1.5 rounded-xl bg-green-600 text-white shadow-md cursor-pointer"
+      >
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        <span class="text-[10px] font-black uppercase tracking-tight mt-0.5">WhatsApp</span>
+      </button>
+
+      <!-- 3. Plan Project -->
+      <a
+        href="#estimator"
+        class="touch-scale flex flex-col items-center justify-center py-1.5 rounded-xl text-zinc-200 hover:bg-zinc-800"
+      >
+        <i data-lucide="compass" class="w-5 h-5 text-yellow-400"></i>
+        <span class="text-[10px] font-extrabold uppercase tracking-tight mt-0.5">Plan Project</span>
+      </a>
+
+      <!-- 4. 3D Visiting Card -->
+      <button
+        onclick="openVisitingCardModal()"
+        class="touch-scale flex flex-col items-center justify-center py-1.5 rounded-xl text-zinc-200 hover:bg-zinc-800 cursor-pointer"
+      >
+        <i data-lucide="credit-card" class="w-5 h-5 text-red-400"></i>
+        <span class="text-[10px] font-extrabold uppercase tracking-tight mt-0.5">Visiting Card</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Desktop Floating Quick Buttons -->
+  <div class="hidden lg:flex fixed bottom-6 right-6 z-40 flex-col gap-3">
+    <button
+      onclick="sendWhatsApp()"
+      title="Chat on WhatsApp"
+      class="pulse-whatsapp w-14 h-14 rounded-full bg-green-600 hover:bg-green-500 text-white shadow-2xl flex items-center justify-center transition transform hover:scale-110 cursor-pointer"
+    >
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </button>
+    <a
+      href="tel:7742144097"
+      title="Call Vikash Kumar: 7742144097"
+      class="pulse-red w-14 h-14 rounded-full bg-crimson-600 hover:bg-red-500 text-white shadow-2xl flex items-center justify-center transition transform hover:scale-110"
+    >
+      <i data-lucide="phone-call" class="w-6 h-6"></i>
+    </a>
+  </div>
+
+  <!-- ==========================================
+       MODAL 1: 3D-FLIPPING VISITING CARD + VCARD DOWNLOAD
+       ========================================== -->
+  <div id="visiting-card-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-2xl w-full p-4 sm:p-6 shadow-2xl relative max-h-[92vh] overflow-y-auto">
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-zinc-800">
+        <div class="flex items-center gap-2 text-white font-extrabold text-xs sm:text-base">
+          <i data-lucide="credit-card" class="w-4 h-4 sm:w-5 sm:h-5 text-red-500"></i>
+          <span>Tap Card to Flip 180° in 3D</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            onclick="flipVisitingCard()"
+            class="bg-crimson-600 hover:bg-red-500 text-white text-[11px] font-extrabold uppercase px-3 py-1.5 rounded-lg flex items-center gap-1 shadow cursor-pointer"
+          >
+            <i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i>
+            <span>Flip 3D</span>
+          </button>
+          <button
+            onclick="closeVisitingCardModal()"
+            class="p-1.5 rounded-lg bg-zinc-800 text-zinc-400 hover:text-white cursor-pointer"
+          >
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3D Flip Card Container -->
+      <div class="perspective-1000 w-full cursor-pointer" onclick="flipVisitingCard()">
+        <div id="card-3d-inner" class="transform-style-3d relative w-full min-h-[330px] sm:min-h-[360px]">
+          
+          <!-- FRONT: EXACT REPLICA OF UPLOADED VISITING CARD -->
+          <div class="backface-hidden relative bg-white text-zinc-900 rounded-xl overflow-hidden shadow-2xl border-2 border-zinc-300">
+            <div
+              class="hidden sm:block absolute top-0 right-0 bottom-0 w-24 bg-crimson-600 pointer-events-none"
+              style="clip-path: polygon(65% 0, 100% 0, 100% 100%, 0% 100%);"
+            ></div>
+
+            <div class="p-4 sm:p-6 relative z-10">
+              <div class="flex justify-between items-start gap-2">
+                <div>
+                  <h3 class="text-xl sm:text-3xl font-serif italic font-bold text-crimson-600">
+                    Vikash Kumar
+                  </h3>
+                  <div class="mt-1 space-y-0.5 text-base sm:text-xl font-black text-indigo-950">
+                    <div class="flex items-center gap-2" onclick="event.stopPropagation()">
+                      <a href="tel:7742144097" class="hover:text-crimson-600">7742144097</a>
+                      <button onclick="copyPhoneNumber('7742144097', this)" class="text-[10px] bg-zinc-100 px-2 py-0.5 rounded font-sans font-bold text-zinc-700">Copy</button>
+                    </div>
+                    <div class="flex items-center gap-2" onclick="event.stopPropagation()">
+                      <a href="tel:9175852929" class="hover:text-crimson-600">9175852929</a>
+                      <button onclick="copyPhoneNumber('9175852929', this)" class="text-[10px] bg-zinc-100 px-2 py-0.5 rounded font-sans font-bold text-zinc-700">Copy</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Jindal Logo -->
+                <div class="text-right bg-white px-2.5 py-1.5 rounded-lg border border-zinc-200 shadow-sm">
+                  <div class="flex items-center justify-end gap-1 mb-0.5">
+                    <span class="w-3 h-1.5 bg-orange-500 rounded-sm inline-block"></span>
+                    <span class="w-5 h-1.5 bg-green-600 rounded-sm inline-block"></span>
+                  </div>
+                  <p class="text-lg sm:text-2xl font-black italic tracking-tighter text-slate-800 leading-none">
+                    JINDAL
+                  </p>
+                  <p class="text-[9px] font-extrabold tracking-widest text-zinc-900">
+                    STEEL & POWER
+                  </p>
+                </div>
+              </div>
+
+              <h2 class="mt-2.5 text-base sm:text-2xl font-black text-crimson-600 tracking-tight leading-snug">
+                Shree Krishna Steel Railing & Glass Railing Works
+              </h2>
+
+              <div class="mt-1 text-[11px] sm:text-sm font-extrabold text-indigo-950 leading-snug">
+                <p><span class="text-crimson-600">Mfg. of :</span> All Kinds of Stainless Steel Railing & Steel Furniture 202, 304 Grade</p>
+                <p>Attractive Design, Superiors Steel Quality Extra Long Life, Steel Letters & Grills</p>
+              </div>
+
+              <!-- 5 Card Thumbnails -->
+              <div class="mt-3 grid grid-cols-5 gap-1.5">
+                <img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=300&q=80" class="h-14 sm:h-20 w-full object-cover rounded border border-indigo-900" alt="Gate" />
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=300&q=80" class="h-14 sm:h-20 w-full object-cover rounded border border-indigo-900" alt="Stair" />
+                <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=300&q=80" class="h-14 sm:h-20 w-full object-cover rounded border border-indigo-900" alt="Glass" />
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=300&q=80" class="h-14 sm:h-20 w-full object-cover rounded border border-indigo-900" alt="Building" />
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=300&q=80" class="h-14 sm:h-20 w-full object-cover rounded border border-indigo-900" alt="Terrace" />
+              </div>
+            </div>
+
+            <div class="bg-crimson-600 text-white text-center py-2.5 px-3 font-extrabold text-[11px] sm:text-sm">
+              # 45-1-53A, Beside Mosque, Opp. Indian Petrol Bunk, Padavalarevu, VIJAYAWADA-520 004.
+            </div>
+          </div>
+
+          <!-- BACK SIDE OF 3D CARD -->
+          <div class="backface-hidden rotate-y-180 absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-red-950 text-white rounded-xl p-5 flex flex-col justify-between border-2 border-crimson-600 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-2.5">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-yellow-400">Back Side • Grade Guide</span>
+                <h4 class="text-base sm:text-lg font-black uppercase">Shree Krishna Steel & Glass Works</h4>
+              </div>
+              <span class="text-[11px] bg-crimson-600 px-2.5 py-1 rounded font-bold">Vijayawada</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2 text-xs">
+              <div class="bg-black/40 p-3 rounded-lg border border-zinc-800">
+                <p class="font-black text-yellow-400 uppercase mb-0.5">Jindal 304 Grade</p>
+                <p class="text-zinc-300 text-[11px] leading-relaxed">100% rust-proof & weather-resistant for outdoor balconies, main gates & glass spigots.</p>
+              </div>
+              <div class="bg-black/40 p-3 rounded-lg border border-zinc-800">
+                <p class="font-black text-red-400 uppercase mb-0.5">Jindal 202 Grade</p>
+                <p class="text-zinc-300 text-[11px] leading-relaxed">High strength & mirror shine at economical cost for indoor staircases & steel furniture.</p>
+              </div>
+            </div>
+
+            <div class="text-xs border-t border-zinc-800 pt-2 flex items-center justify-between">
+              <span class="text-zinc-400">Tap card again to flip to front</span>
+              <span class="text-yellow-400 font-bold">Prop: Vikash Kumar</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Save Contact (.vcf) & Quick Call Actions -->
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        <button
+          onclick="downloadVCard()"
+          class="sheen-effect touch-scale w-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-black text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <i data-lucide="user-plus" class="w-4 h-4 text-red-700"></i>
+          <span>Save Contact to Phone (.vcf)</span>
+        </button>
+
+        <button
+          onclick="sendWhatsApp('Hello Vikash Kumar ji, I viewed your 3D Visiting Card and want to inquire about railing work.')"
+          class="touch-scale w-full bg-green-600 hover:bg-green-500 text-white font-black text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Chat on WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL 2: TOUCH LIGHTBOX MODAL
+       ========================================== -->
+  <div id="lightbox-modal" onclick="closeLightbox()" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
+    <div onclick="event.stopPropagation()" class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl">
+      <div class="relative">
+        <img id="lightbox-img" src="" alt="Project Preview" class="w-full max-h-[60vh] object-cover" />
+        <button
+          onclick="closeLightbox()"
+          class="absolute top-3 right-3 bg-black/75 hover:bg-crimson-600 text-white p-2 rounded-full transition cursor-pointer"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-4 sm:p-5 space-y-3 text-white">
+        <div>
+          <span id="lightbox-meta" class="text-[11px] font-extrabold uppercase tracking-widest text-yellow-400"></span>
+          <h4 id="lightbox-title" class="text-base sm:text-xl font-black uppercase mt-0.5"></h4>
+          <p id="lightbox-desc" class="text-xs text-zinc-300 mt-1"></p>
+        </div>
+        <button
+          id="lightbox-wa-btn"
+          class="sheen-effect touch-scale w-full bg-green-600 hover:bg-green-500 text-white text-xs font-black uppercase tracking-wider py-3.5 px-5 rounded-xl flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+        >
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Plan This Design on WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       APPLICATION JAVASCRIPT
+       ========================================== -->
+  <script>
+    // 1. Products Catalog Data (Zero Rupee Tags - Replaced with Bespoke Status Badges)
+    const PRODUCTS = [
+      {
+        id: 1,
+        name: "Toughened Glass Staircase Railing",
+        category: "Glass Railings",
+        grades: "SS 304 + 12mm Glass",
+        statusBadge: "Tailored to Your Space",
+        badge: "Modern Luxury",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
+        description: "Spigot & D-bracket mounted 10mm/12mm toughened glass railings paired with mirror-finish Jindal SS 304 handrails."
+      },
+      {
+        id: 2,
+        name: "SS Designer Main Gates",
+        category: "Gates & Grills",
+        grades: "SS 304 / SS 202",
+        statusBadge: "Custom Built to Spec",
+        badge: "Bestseller",
+        image: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=900&q=80",
+        description: "Heavy-duty stainless steel main gates with laser-cut floral motifs, geometric bars, and rust-proof Jindal steel framing."
+      },
+      {
+        id: 3,
+        name: "SS 304 Balcony & Terrace Railing",
+        category: "SS Railings",
+        grades: "Jindal 304 Grade",
+        statusBadge: "Direct Workshop Deal",
+        badge: "Extra Long Life",
+        image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80",
+        description: "100% weatherproof horizontal pipe and glass-hybrid balcony railings built to resist rain and humidity."
+      },
+      {
+        id: 4,
+        name: "Duplex & Spiral Staircase Railing",
+        category: "SS Railings",
+        grades: "SS 202 / SS 304",
+        statusBadge: "Bespoke Factory Quote",
+        badge: "Precision Crafted",
+        image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80",
+        description: "Multi-bar stainless steel railings for residential duplexes and spiral stairs with seamless TIG-welded joints."
+      },
+      {
+        id: 5,
+        name: "Steel Furniture (202 & 304 Grade)",
+        category: "Furniture & Letters",
+        grades: "SS 202 / SS 304",
+        statusBadge: "Custom Design Options",
+        badge: "Superior Quality",
+        image: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=900&q=80",
+        description: "Custom stainless steel dining tables, center tables, benches, racks, and PVD gold luxury furniture frames."
+      },
+      {
+        id: 6,
+        name: "3D Steel Letters & Window Grills",
+        category: "Furniture & Letters",
+        grades: "SS 304 Laser Cut",
+        statusBadge: "Precision Crafted",
+        badge: "Laser Cut",
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+        description: "Laser-cut stainless steel building names, apartment letters, house nameplates, and security window grills."
+      }
+    ];
+
+    let isMobileGridMode = false;
+    let activeProductCategory = 'All';
+
+    function renderProducts(category = 'All') {
+      activeProductCategory = category;
+      const grid = document.getElementById('products-grid');
+      const filtered = category === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === category);
+
+      const cardWidthClass = isMobileGridMode
+        ? 'w-full'
+        : 'snap-item shrink-0 w-[84vw] sm:w-[330px] md:w-auto';
+
+      grid.innerHTML = filtered.map(p => `
+        <div class="${cardWidthClass} sheen-effect group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-zinc-200 flex flex-col">
+          <!-- Red-to-Black Angled Tab Header (Matches Sample Website) -->
+          <div class="bg-gradient-to-r from-crimson-600 via-red-700 to-zinc-950 text-white px-4 py-3 flex items-center justify-between">
+            <h3 class="font-extrabold text-xs sm:text-sm uppercase tracking-wider truncate">${p.name}</h3>
+            <span class="text-[9px] font-black uppercase bg-white/15 px-2 py-0.5 rounded shrink-0">${p.grades}</span>
+          </div>
+
+          <div class="relative h-52 sm:h-56 overflow-hidden bg-zinc-900">
+            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 bg-crimson-600 text-white text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded shadow">
+              ${p.badge}
+            </span>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
+              <span class="text-[11px] font-extrabold bg-black/75 text-yellow-300 px-3 py-1 rounded-lg border border-yellow-400/30">
+                ${p.statusBadge}
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <p class="text-zinc-600 text-xs sm:text-sm leading-relaxed">${p.description}</p>
+            <div class="pt-2.5 border-t border-zinc-100 grid grid-cols-2 gap-2">
+              <button
+                onclick="sendWhatsApp('Hello Vikash Kumar ji, I want to discuss custom planning and factory-direct options for ${p.name} (${p.grades}).')"
+                class="touch-scale bg-green-600 hover:bg-green-500 text-white text-[11px] font-extrabold py-2.5 px-3 rounded-xl shadow flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Enquire on WhatsApp</span>
+              </button>
+              <a
+                href="tel:+917742144097"
+                class="touch-scale bg-zinc-900 hover:bg-crimson-600 text-white text-[11px] font-extrabold py-2.5 px-3 rounded-xl shadow flex items-center justify-center gap-1.5 transition"
+              >
+                <i data-lucide="phone-call" class="w-3.5 h-3.5 text-yellow-400"></i>
+                <span>Call Now</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      refreshLucideIcons();
+    }
+
+    function filterProducts(category, btnEl) {
+      if (btnEl) {
+        document.querySelectorAll('.prod-filter-btn').forEach(b => {
+          b.className = 'prod-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition cursor-pointer bg-white text-zinc-800 border border-zinc-300';
+        });
+        btnEl.className = 'prod-filter-btn shrink-0 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition cursor-pointer bg-crimson-600 text-white shadow';
+      }
+      renderProducts(category);
+    }
+
+    function toggleProductMobileLayout() {
+      isMobileGridMode = !isMobileGridMode;
+      const grid = document.getElementById('products-grid');
+      const text = document.getElementById('toggle-layout-text');
+      const hint = document.getElementById('product-swipe-hint');
+
+      if (isMobileGridMode) {
+        grid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7 pb-4';
+        text.textContent = 'Swipe View';
+        if (hint) hint.classList.add('hidden');
+      } else {
+        grid.className = 'flex md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto md:overflow-visible snap-carousel no-scrollbar gap-4 sm:gap-7 -mx-4 px-4 sm:mx-0 sm:px-0 pb-4';
+        text.textContent = 'Grid View';
+        if (hint) hint.classList.remove('hidden');
+      }
+      renderProducts(activeProductCategory);
+    }
+
+    // 2. Gallery Data & 2-Column Mobile Masonry Filter
+    const GALLERY_ITEMS = [
+      {
+        id: 0,
+        title: "Ornamental Double-Door SS Main Gate",
+        category: "SS Gates",
+        meta: "Jindal 304 Grade • Padavalarevu",
+        desc: "Heavy-duty stainless steel main gate with floral center medallions and vertical security bars.",
+        image: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=1000&q=80",
+        tall: true
+      },
+      {
+        id: 1,
+        title: "Green-Tinted Toughened Glass Staircase",
+        category: "Glass Railing",
+        meta: "SS 304 + 12mm Glass • Benz Circle",
+        desc: "Duplex indoor staircase featuring green toughened glass and mirror-finish handrails.",
+        image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80",
+        crimsonOverlay: true
+      },
+      {
+        id: 2,
+        title: "Apartment Elevation Balcony Railings",
+        category: "Balcony",
+        meta: "Jindal 304 Grade • Gurunanak Colony",
+        desc: "Complete 5-floor apartment balcony railing and main gate package.",
+        image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: 3,
+        title: "Duplex Multi-Rod SS Staircase Railing",
+        category: "Staircase",
+        meta: "Jindal 202 Grade • Auto Nagar",
+        desc: "Precision argon TIG-welded continuous handrail with mirror buffing.",
+        image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: 4,
+        title: "Night-Lit Terrace & Garden SS Railing",
+        category: "Balcony",
+        meta: "Weatherproof SS 304 • Bhavanipuram",
+        desc: "Elevated terrace safety railing overlooking landscaped garden at night.",
+        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        id: 5,
+        title: "Frameless Spigot Glass Balcony Railing",
+        category: "Glass Railing",
+        meta: "12mm Toughened • Vijayawada",
+        desc: "Ultra-clean architectural glass balcony with heavy SS 304 matt black/silver spigots.",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+      }
+    ];
+
+    function renderGallery(category = 'All') {
+      const grid = document.getElementById('gallery-grid');
+      const filtered = category === 'All' ? GALLERY_ITEMS : GALLERY_ITEMS.filter(g => g.category === category);
+
+      grid.innerHTML = filtered.map((item, idx) => `
+        <div
+          onclick="openLightbox(${item.id})"
+          class="touch-scale relative group rounded-2xl overflow-hidden shadow-md min-h-[175px] sm:min-h-[240px] cursor-pointer ${idx === 0 && filtered.length > 2 ? 'col-span-2 lg:col-span-1' : ''}"
+        >
+          <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+          <div class="absolute inset-0 ${item.crimsonOverlay ? 'bg-crimson-600/75' : 'bg-gradient-to-t from-black/90 via-black/25 to-transparent'}"></div>
+          <div class="absolute top-2.5 left-2.5 bg-black/60 backdrop-blur-sm text-yellow-300 text-[9px] font-extrabold uppercase px-2 py-0.5 rounded">
+            ${item.category}
+          </div>
+          <div class="absolute bottom-0 inset-x-0 p-3 sm:p-4 text-white">
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-wider font-bold text-yellow-300 block truncate">${item.meta}</span>
+            <h4 class="text-xs sm:text-base font-black uppercase leading-tight mt-0.5 line-clamp-2">${item.title}</h4>
+          </div>
+        </div>
+      `).join('');
+      refreshLucideIcons();
+    }
+
+    function filterGallery(category, btnEl) {
+      document.querySelectorAll('.gal-filter-btn').forEach(b => {
+        b.className = 'gal-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-zinc-100 text-zinc-700 cursor-pointer';
+      });
+      btnEl.className = 'gal-filter-btn shrink-0 px-4 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-zinc-900 text-white cursor-pointer';
+      renderGallery(category);
+    }
+
+    function openLightbox(id) {
+      const item = GALLERY_ITEMS.find(g => g.id === id) || GALLERY_ITEMS[0];
+      document.getElementById('lightbox-img').src = item.image;
+      document.getElementById('lightbox-title').textContent = item.title;
+      document.getElementById('lightbox-meta').textContent = item.meta;
+      document.getElementById('lightbox-desc').textContent = item.desc;
+      document.getElementById('lightbox-wa-btn').onclick = () => {
+        sendWhatsApp(`Hello Vikash Kumar ji, I liked the "${item.title}" (${item.meta}) photo in your gallery and would like to plan a similar custom design for my space.`);
+      };
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+    }
+
+    // 3. Custom Project Planner & Spec Builder Logic (No Rupee Amounts)
+    let currentCalcProduct = 'glass_railing';
+    let currentCalcGrade = '304';
+
+    const SPEC_CATEGORIES = {
+      ss_railing: { unit: 'Rft', label: 'SS Railing (Balcony / Terrace)' },
+      glass_railing: { unit: 'Rft', label: 'Toughened Glass Railing' },
+      main_gate: { unit: 'Rft / Sq.Ft', label: 'Main Designer Gate' },
+      duplex_staircase: { unit: 'Rft', label: 'Duplex Staircase Railing' },
+      letters_grill: { unit: 'Rft / Custom', label: 'Laser Cut Letters / Grill & Furniture' }
+    };
+
+    function setEstimatorProduct(prodId, btnEl) {
+      currentCalcProduct = prodId;
+      document.querySelectorAll('.calc-prod-btn').forEach(b => {
+        const isWide = b.classList.contains('col-span-2');
+        b.className = `calc-prod-btn touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-zinc-950 border-zinc-800 text-zinc-300 ${isWide ? 'col-span-2 sm:col-span-2' : ''}`;
+      });
+      const isClickedWide = btnEl.classList.contains('col-span-2');
+      btnEl.className = `calc-prod-btn touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-crimson-600/20 border-crimson-500 text-white ${isClickedWide ? 'col-span-2 sm:col-span-2' : ''}`;
+      updateEstimator();
+    }
+
+    function setEstimatorGrade(grade) {
+      currentCalcGrade = grade;
+      const btn202 = document.getElementById('grade-btn-202');
+      const btn304 = document.getElementById('grade-btn-304');
+
+      if (grade === '202') {
+        btn202.className = 'touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-crimson-600 border-red-500 text-white shadow-lg shadow-red-600/25';
+        btn304.className = 'touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-zinc-950 border-zinc-800 text-zinc-300';
+      } else {
+        btn304.className = 'touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-crimson-600 border-red-500 text-white shadow-lg shadow-red-600/25';
+        btn202.className = 'touch-scale p-3.5 rounded-xl border text-left transition cursor-pointer bg-zinc-950 border-zinc-800 text-zinc-300';
+      }
+      updateEstimator();
+    }
+
+    function updateEstimator() {
+      const length = Number(document.getElementById('calc-length').value);
+      const finish = document.getElementById('calc-finish').value;
+      const item = SPEC_CATEGORIES[currentCalcProduct];
+      const gradeLabel = currentCalcGrade === '304'
+        ? 'Jindal 304 Grade (Weatherproof Exterior)'
+        : 'Jindal 202 Grade (Indoor Classic)';
+
+      document.getElementById('calc-length-label').textContent = `${length} Rft`;
+      document.getElementById('spec-pill-category').textContent = item.label;
+      document.getElementById('spec-pill-grade').textContent = gradeLabel;
+      document.getElementById('spec-pill-scale').textContent = `Est. Scale: ${length} Rft`;
+      document.getElementById('spec-pill-finish').textContent = finish;
+    }
+
+    function sendEstimatorToWhatsApp() {
+      const length = document.getElementById('calc-length').value;
+      const finish = document.getElementById('calc-finish').value;
+      const item = SPEC_CATEGORIES[currentCalcProduct];
+      const gradeLabel = currentCalcGrade === '304'
+        ? 'Jindal 304 Grade (Weatherproof Exterior)'
+        : 'Jindal 202 Grade (Indoor Classic)';
+      const msg = `Hello Vikash Kumar ji (Shree Krishna Steel Railing Works), I built my project specs on your website:\n• Category: ${item.label}\n• Material Grade: ${gradeLabel}\n• Approx Scale: ${length} Rft\n• Finish: ${finish}\n\nLet's discuss planning, site measurement, and the best direct-from-workshop deal!`;
+      sendWhatsApp(msg);
+    }
+
+    function selectProductForQuote(productName) {
+      const select = document.getElementById('q-service');
+      if (select) {
+        select.innerHTML += `<option selected>${productName}</option>`;
+      }
+      document.getElementById('quote-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 4. Generate & Download .vcf Contact Card (vCard) for Mobile Phones
+    function downloadVCard() {
+      const vcfContent = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "N:Kumar;Vikash;;;",
+        "FN:Vikash Kumar - Shree Krishna Steel & Glass Railing Works",
+        "ORG:Shree Krishna Steel Railing & Glass Railing Works",
+        "TITLE:Proprietor (Jindal 202 & 304 Grade Steel)",
+        "TEL;TYPE=CELL,VOICE:+917742144097",
+        "TEL;TYPE=WORK,VOICE:+919175852929",
+        "ADR;TYPE=WORK:;;# 45-1-53A, Beside Mosque, Opp. Indian Petrol Bunk, Padavalarevu;Vijayawada;Andhra Pradesh;520004;India",
+        "NOTE:Mfg. of All Kinds of Stainless Steel Railing, Glass Railing & Steel Furniture 202, 304 Grade.",
+        "END:VCARD"
+      ].join("\r\n");
+
+      const blob = new Blob([vcfContent], { type: "text/vcard;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "Vikash_Kumar_Shree_Krishna_Steel_Works.vcf");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    // 5. WhatsApp & Quote Form Submission
+    function sendWhatsApp(customMessage) {
+      const phone = "917742144097";
+      const text = customMessage || "Hello Vikash Kumar ji, I would like to inquire about Stainless Steel & Glass Railing works in Vijayawada.";
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('q-name').value;
+      const phone = document.getElementById('q-phone').value;
+      const loc = document.getElementById('q-location').value || 'Vijayawada';
+      const service = document.getElementById('q-service').value;
+      const grade = document.getElementById('q-grade').value;
+      const message = document.getElementById('q-message').value;
+
+      const waText = `Hello Vikash Kumar ji (Shree Krishna Steel Railing Works),\n\nNew Quote Request:\n• Name: ${name}\n• Phone: ${phone}\n• Location: ${loc}\n• Service: ${service}\n• Grade: ${grade}\n• Details: ${message}`;
+      sendWhatsApp(waText);
+    }
+
+    // 6. Visiting Card Modal & Mobile Drawer Controls
+    function openVisitingCardModal() {
+      document.getElementById('visiting-card-modal').classList.remove('hidden');
+    }
+    function closeVisitingCardModal() {
+      document.getElementById('visiting-card-modal').classList.add('hidden');
+    }
+    function flipVisitingCard() {
+      document.getElementById('card-3d-inner').classList.toggle('flipped');
+    }
+    function copyPhoneNumber(num, btn) {
+      const temp = document.createElement('input');
+      document.body.appendChild(temp);
+      temp.value = num;
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+      const orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = orig; }, 1800);
+    }
+
+    function openMobileDrawer() {
+      const backdrop = document.getElementById('mobile-drawer-backdrop');
+      const drawer = document.getElementById('mobile-drawer');
+      backdrop.classList.remove('hidden');
+      setTimeout(() => {
+        backdrop.classList.remove('opacity-0');
+        drawer.classList.remove('translate-x-full');
+      }, 10);
+    }
+
+    function closeMobileDrawer() {
+      const backdrop = document.getElementById('mobile-drawer-backdrop');
+      const drawer = document.getElementById('mobile-drawer');
+      backdrop.classList.add('opacity-0');
+      drawer.classList.add('translate-x-full');
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+      }, 300);
+    }
+
+    // Feature Carousel Swipe Dots Indicator
+    function updateFeatureDots(el) {
+      const index = Math.round(el.scrollLeft / (el.clientWidth * 0.75));
+      const dots = document.getElementById('feature-dots').children;
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = i === index
+          ? 'w-4 h-1.5 rounded-full bg-crimson-600 transition-all'
+          : 'w-1.5 h-1.5 rounded-full bg-zinc-600 transition-all';
+      }
+    }
+
+    // 7. Scroll Reveal & Counter Animations
+    function initScrollAnimations() {
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealEls.forEach(el => observer.observe(el));
+
+      const counterSection = document.getElementById('hero-counters');
+      let started = false;
+      const counterObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !started) {
+          started = true;
+          document.querySelectorAll('.counter-value').forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            let current = 0;
+            const inc = target / 60;
+            const timer = setInterval(() => {
+              current += inc;
+              if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+              } else {
+                counter.textContent = Math.ceil(current);
+              }
+            }, 22);
+          });
+        }
+      }, { threshold: 0.2 });
+
+      if (counterSection) counterObserver.observe(counterSection);
+    }
+
+    // 8. HTML5 Canvas Welding Sparks Particle System
+    function initWeldingSparksCanvas() {
+      const canvas = document.getElementById('sparks-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      function resizeCanvas() {
+        canvas.width = canvas.parentElement.offsetWidth;
+        canvas.height = canvas.parentElement.offsetHeight;
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      const count = window.innerWidth < 768 ? 28 : 50;
+      const sparks = Array.from({ length: count }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 1.8,
+        vy: -Math.random() * 2.2 - 0.5,
+        size: Math.random() * 2.4 + 0.8,
+        alpha: Math.random() * 0.85 + 0.15,
+        color: Math.random() > 0.4 ? '#ef4444' : '#fbbf24'
+      }));
+
+      function animateSparks() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        sparks.forEach(s => {
+          s.x += s.vx;
+          s.y += s.vy;
+          s.alpha -= 0.004;
+
+          if (s.y < 0 || s.alpha <= 0) {
+            s.x = Math.random() * canvas.width;
+            s.y = canvas.height + 8;
+            s.alpha = Math.random() * 0.85 + 0.2;
+          }
+
+          ctx.save();
+          ctx.globalAlpha = Math.max(0, s.alpha);
+          ctx.fillStyle = s.color;
+          ctx.shadowBlur = 10;
+          ctx.shadowColor = s.color;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+        requestAnimationFrame(animateSparks);
+      }
+      animateSparks();
+    }
+
+    function refreshLucideIcons() {
+      try {
+        if (typeof window.lucide !== 'undefined' && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        }
+      } catch (err) {
+        console.warn('Lucide icon initialization warning:', err);
+      }
+    }
+
+    window.onload = function () {
+      renderProducts('All');
+      renderGallery('All');
+      updateEstimator();
+      initScrollAnimations();
+      initWeldingSparksCanvas();
+      refreshLucideIcons();
+    };
+  </script>
+</body>
+</html>
