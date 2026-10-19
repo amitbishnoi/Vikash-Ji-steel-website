@@ -331,3 +331,45 @@ h1 em, h2 em { color: var(--green); font-weight: 400; }
   .visiting-card-dialog-head { gap: 10px; margin-bottom: 12px; }
   .visiting-card-dialog > img { max-height: calc(100vh - 112px); }
 }
+
+/* Readable type scale: use fluid sizing for copy and a clear floor for labels. */
+body { font-size: clamp(1rem, .96rem + .2vw, 1.125rem); }
+.announcement { font-size: clamp(.75rem, .7rem + .15vw, .8125rem); letter-spacing: .06em; }
+.brand-name { font-size: .8125rem; }
+.brand-name small { font-size: .6875rem; letter-spacing: .12em; }
+.main-nav { font-size: 1rem; }
+.nav-contact span { font-size: 1.125rem; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; }
+.hero-description, .feature-copy > p:not(.eyebrow), .contact-inner > p:not(.eyebrow) {
+  font-size: clamp(1rem, .96rem + .2vw, 1.125rem);
+  line-height: 1.75;
+}
+.hero-note, .image-caption, .hero-index, .collection-number, .image-kind,
+.image-vertical-label, .grade-note, .contact-side-note, .back-top, .copyright {
+  font-size: .75rem;
+  letter-spacing: .08em;
+}
+.button, .text-link { font-size: .9375rem; }
+.section-note { font-size: 1rem; line-height: 1.7; }
+.collection-label > span { font-size: .75rem; letter-spacing: .1em; }
+.contact-phone { font-size: 1rem; }
+.site-footer > p { font-size: 1rem; }
+
+@media (max-width: 700px) {
+  .announcement { font-size: .75rem; }
+  .brand-name { font-size: .75rem; }
+  .brand-name small { font-size: .625rem; }
+  .main-nav { font-size: 1rem; }
+  .hero .eyebrow { font-size: .75rem; }
+  .hero-description { font-size: 1rem; }
+  .hero-note { font-size: .75rem; }
+  .button, .text-link { font-size: .9375rem; }
+  .image-caption, .hero-index, .collection-number, .image-kind,
+  .image-vertical-label, .grade-note, .contact-side-note, .back-top, .copyright {
+    font-size: .6875rem;
+  }
+  .collection-label > span { font-size: .6875rem; }
+  .section-note, .feature-copy > p:not(.eyebrow), .contact-inner > p:not(.eyebrow) { font-size: 1rem; }
+  .contact-phone { font-size: .9375rem; }
+  .site-footer > p { font-size: .9375rem; }
+}
