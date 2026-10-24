@@ -1,0 +1,19 @@
+# Installed AI agent skills and configuration
+.agents/
+.codex/
+skills-lock.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Local environment and dependency/build output
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+build/
+
+# Local design direction and screenshot artifacts
+.taste-skill/
