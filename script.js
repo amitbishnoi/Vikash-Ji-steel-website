@@ -54,33 +54,69 @@ if (workSection && workTrack && !reduceMotion.matches) {
   let scrollFrame = 0;
   let activeBackdrop = 0;
   let selectedCard = -1;
+  const anglePerCard = 360 / workCards.length;
+
+  const placeCards = () => {
+    // Explicit 400px cylinder radius constraint
+    const radius = 350; 
+    workTrack.style.setProperty('--cylinder-radius', `${radius}px`);
+    
+    workCards.forEach((card, index) => {
+      card.style.setProperty('--item-angle', `${index * anglePerCard}deg`);
+      card.style.transform = `rotateX(${index * anglePerCard}deg) translateZ(${radius}px)`;
+      
+      // Enforce clean, smooth rounded corners across your components
+      card.style.borderRadius = '16px'; 
+      card.style.overflow = 'hidden'; 
+    });
+  };
+
   const moveWorkTrack = () => {
     scrollFrame = 0;
-    const marquee = workSection.querySelector('.work-marquee');
-    const distance = Math.max(0, workTrack.scrollHeight - marquee.clientHeight);
-    workSection.style.height = `${window.innerHeight + distance}px`;
     const sectionTop = window.scrollY + workSection.getBoundingClientRect().top;
     const travel = Math.max(1, workSection.offsetHeight - window.innerHeight);
     const progress = Math.max(0, Math.min(1, (window.scrollY - sectionTop) / travel));
-    workTrack.style.setProperty('--scroll-shift', `${-distance * progress}px`);
-    const cardPitch = workTrack.scrollHeight / workCards.length;
-    const nextCard = Math.max(0, Math.min(workCards.length - 1, Math.floor((distance * progress + marquee.clientHeight / 2) / cardPitch)));
+    
+    const rotation = progress * anglePerCard * (workCards.length - 1);
+    workTrack.style.setProperty('--scroll-rotation', `${rotation}deg`);
+    
+    const nextCard = (workCards.length - Math.round(rotation / anglePerCard)) % workCards.length;
+    const facingPosition = workCards.length - rotation / anglePerCard;
+
+    workCards.forEach((card, index) => {
+      const offset = (index - facingPosition + workCards.length * 2) % workCards.length;
+      const distance = Math.min(offset, workCards.length - offset);
+      const image = card.querySelector('img');
+      
+      if (image) {
+        // Enforce maximum 10px blur cap
+        image.style.filter = `blur(${Math.min(10, distance * 5)}px)`;
+      }
+    });
+
     if (nextCard !== selectedCard && backdropImages.length === 2) {
       selectedCard = nextCard;
       const nextBackdrop = 1 - activeBackdrop;
-      backdropImages[nextBackdrop].src = workCards[nextCard].querySelector('img').getAttribute('src');
-      backdropImages[nextBackdrop].classList.add('is-active');
-      backdropImages[activeBackdrop].classList.remove('is-active');
-      activeBackdrop = nextBackdrop;
+      const targetSrc = workCards[nextCard]?.querySelector('img')?.getAttribute('src');
+      if (targetSrc) {
+        backdropImages[nextBackdrop].src = targetSrc;
+        backdropImages[nextBackdrop].classList.add('is-active');
+        backdropImages[activeBackdrop].classList.remove('is-active');
+        activeBackdrop = nextBackdrop;
+      }
     }
   };
+
   const requestTrackMove = () => {
     if (!scrollFrame) scrollFrame = window.requestAnimationFrame(moveWorkTrack);
   };
+
+  placeCards();
   window.addEventListener('scroll', requestTrackMove, { passive: true });
-  window.addEventListener('resize', requestTrackMove);
+  window.addEventListener('resize', () => { placeCards(); requestTrackMove(); });
   moveWorkTrack();
 }
+
 
 const revealTargets = document.querySelectorAll('main > section:not(.work-section), .work-heading, .work-marquee, .work-hint, .site-footer');
 if ('IntersectionObserver' in window && !reduceMotion.matches) {
